@@ -1,0 +1,18 @@
+<h3>Find By Prenom</h3>
+<div style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lastname">Prenom</label>
+      <input type="text" class="form-control" id="prenom" required [(ngModel)]="prenom" name="prenom">
+    </div>
+
+    <div class="btn-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+<ul>
+  <li *ngFor="let enfant of enfants">
+    <h4>{{enfant.id}} - {{enfant.nom}} {{enfant.prenom}}</h4>
+  </li>
+</ul>

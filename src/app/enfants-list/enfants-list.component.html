@@ -1,0 +1,9 @@
+<h1>Enfants</h1>
+
+<div *ngFor="let enfant of enfants | async" style="width: 300px;">
+  <enfant-details [enfant]='enfant'></enfant-details>
+</div>
+
+<div>
+  <button type="button" class="button btn-danger" (click)='deleteEnfants()'>Delete All</button>
+</div>

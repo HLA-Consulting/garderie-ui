@@ -1,0 +1,19 @@
+<div *ngIf="enfant">
+  <div>
+    <label>Nom: </label> {{enfant.nom}}
+  </div>
+  <div>
+    <label>Prenom: </label> {{enfant.prenom}}
+  </div>
+  <div>
+    <label>Active: </label> {{enfant.active}}
+  </div>
+
+  <span class="button is-small btn-primary" *ngIf='enfant.active' (click)='updateActive(false)'>Inactive</span>
+
+  <span class="button is-small btn-primary" *ngIf='!enfant.active' (click)='updateActive(true)'>Active</span>
+
+  <span class="button is-small btn-danger" (click)='deleteEnfant()'>Delete</span>
+
+  <hr/>
+</div>
